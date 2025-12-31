@@ -101,7 +101,9 @@ body::before {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: fit-content;
 }
 
 /* Header */
@@ -168,8 +170,10 @@ body::before {
 .main {
     flex: 1;
     display: flex;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding-top: 8px;
+    min-width: 0;
 }
 
 .panel {
@@ -183,6 +187,7 @@ body::before {
 
 .panel-left {
     flex: 1;
+    min-width: 350px;
     max-width: 600px;
     border-right: var(--border-width) solid var(--border);
     background: linear-gradient(180deg, rgba(255,225,86,0.1) 0%, rgba(255,107,157,0.1) 100%);
@@ -190,6 +195,7 @@ body::before {
 
 .panel-right {
     flex: 1.5;
+    min-width: 400px;
     background: linear-gradient(180deg, rgba(78,205,196,0.1) 0%, rgba(155,89,182,0.1) 100%);
 }
 
@@ -944,7 +950,7 @@ body::before {
     justify-content: flex-start;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
     .panel-ad {
         display: none;
     }
